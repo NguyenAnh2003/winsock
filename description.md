@@ -7,6 +7,32 @@ https://learn.microsoft.com/en-us/windows/win32/winsock/complete-server-code
 Non-blocking https://www.scottklement.com/rpg/socktut/nonblocking.html
 
 
+### Basic mechanisms of client-server
+1. client app send a request to server
+2. server app returns a reply
+3. Some of the basic data communications between client and server
+  - File transfer
+  - Web page
+  - echo
+
+
+### Server socket
+1. create socket
+2. bind to address - what port?
+3. listen - wait for connection to be established
+4. accept - acpt connection from client
+5. send/recv - read and write for a file
+6. shutdown
+7. close - releases data
+
+### Client socket
+1. create a socket
+2. bind - unnecessary
+3. connect to server
+4. send/recv
+5. shutdown
+6. closes - releases data
+
 ### Run
 ```C++
 Server running
@@ -29,3 +55,7 @@ By default, TCP sockets are in "blocking" mode. For example, when you call recv(
 program until at least one byte of data is read from the remote site. This process of waiting for data to appear is referred to as 
 "blocking". The same is true for the write() API, the connect() API, etc. When you run them, the connection "blocks" until the operation 
 is complete
+
+
+
+
